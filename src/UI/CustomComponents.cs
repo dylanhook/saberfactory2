@@ -132,6 +132,7 @@ namespace SaberFactory2.UI.CustomSaber.CustomComponents
             _list.Data = data;
             _list.TableView.ReloadData();
             _listObjects = listItems;
+            _currentIdx = -1;
         }
 
         public void Reload()
@@ -169,7 +170,7 @@ namespace SaberFactory2.UI.CustomSaber.CustomComponents
             {
                 return;
             }
-            _list.TableView.SelectCellWithIdx(idx);
+            _list.TableView.SelectCellWithIdx(idx, true);
             _currentIdx = idx;
             if (scroll)
             {

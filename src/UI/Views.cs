@@ -394,9 +394,10 @@ namespace SaberFactory2.UI.CustomSaber.Views
             var items = new List<ICustomListItem>(metaEnumerable);
             var loadedNames = items.Select(x => x.ListName).ToList();
             _saberList.SetItems(_dirManager.Process(items));
-            _currentComposition = _mainViewModel.PreviewSaber;
+            _currentComposition = _mainViewModel.PreviewSaber ?? _editorInstanceManager.CurrentModelComposition;
             if (_currentComposition != null)
             {
+                _mainViewModel.PreviewSaber = _currentComposition;
                 _saberList.Select(_mainAssetStore.GetMetaDataForComposition(_currentComposition)?.ListName, !scrollToTop);
                 UpdatePedestalText(_currentComposition);
             }
