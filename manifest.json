@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "SaberFactory2",
+  "name": "Saber Factory 2",
+  "author": "Toni Macaroni & dylan",
+  "version": "2.0.0",
+  "description": "A highly customizable saber mod",
+  "gameVersion": "1.40.0",
+  "dependsOn": {
+    "BSIPA": "^4.3.0",
+    "SiraUtil": "^3.1.7",
+    "BeatSaberMarkupLanguage": "^1.11.0",
+    "AssetBundleLoadingTools": "^1.1.10"
+  }
+}

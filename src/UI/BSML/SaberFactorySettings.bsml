@@ -1,0 +1,6 @@
+<settings-container>
+
+	<horizontal>
+		<text text='maintained by youtube.com/dylanhook' align='Center' font-size='3'/>
+	</horizontal>
+</settings-container>

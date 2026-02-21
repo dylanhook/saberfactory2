@@ -1,0 +1,37 @@
+﻿<bg id="root-trail">
+  <vertical id="main-container" bg="round-rect-panel" custom-color="$default-panel" child-align="MiddleCenter" child-expand-height="false" child-control-height="false" spacing="2" pad="3">
+    <vertical bg="panel-top" skew="0" bg-color="#00b6ff40" pad="2" vertical-fit="PreferredSize">
+      <slider-setting text="Length" value="LengthValue" get-event="update-props,update-proportions" apply-on-change="true" increment="1" min="0" max="30"/>
+      <slider-setting text="Width" value="WidthValue" get-event="update-props,update-proportions" apply-on-change="true" min="0" max="~trail-width-max"/>
+    </vertical>
+    <vertical pad="2" spacing="0.5" vertical-fit="PreferredSize">
+      <slider-setting text="Whitestep" value="WhitestepValue" get-event="update-props" apply-on-change="true" min="0" max="1"/>
+      <slider-setting text="Offset" value="OffsetValue" get-event="update-props" apply-on-change="true" min="-0.5" max="0.5" increment="0.01"/>
+      <checkbox text="Flip" value="FlipValue" apply-on-change="true" hover-hint="Flips the trail vertically if enabled" get-event="update-props"/>
+      <checkbox text="Clamp Texture" value="ClampValue" apply-on-change="true" hover-hint="Enable this if you see lines on the border of the trail"/>
+      <checkbox text="Use Vertex Color Only" value="UseVertexColorOnly" apply-on-change="true" hover-hint="if disabled sets both _Color of the material and vertex color"/>
+    </vertical>
+    <horizontal pad="2" spacing="4" id="advanced-container" bg="panel-top" skew="0" bg-color="#00b6ff20">
+      <vertical pref-width="70">
+        <slider-setting get-event="get-advanced" text="Granularity" value="granularity-value" apply-on-change="true" min="0" max="300" integer-only="true"/>
+      </vertical>
+      <button text="Revert" on-click="revert-advanced"/>
+    </horizontal>
+    <horizontal>
+      <sui.button text="Revert" on-click="revert-trail" hover-hint="Revert changes to Trail" style="default-button"/>
+      <sui.button text="Edit Material" on-click="edit-material" hover-hint="Edit the material of the trail" style="default-button"/>
+      <sui.button text="Choose Trail" on-click="choose-trail" hover-hint="Use the Trail of another saber" style="default-button"/>
+    </horizontal>
+  </vertical>
+  <div id="no-trail-container" active="false">
+    <vertical vertical-fit="PreferredSize" bg="round-rect-panel" custom-color="$default-panel" pad="4">
+      <text align="Center" font-size="7" text="This saber has no trail"/>
+      <horizontal spacing="3">
+        <text align="Center" font-size="5" text="But you can "/>
+        <sui.button text="choose a trail from another saber" on-click="choose-trail" hover-hint="Use the Trail of another saber" style="default-button"/>
+      </horizontal>
+    </vertical>
+  </div>
+  <sui.material-editor id="material-editor"/>
+  <sui.choose-trail-popup id="choose-trail-popup"/>
+</bg>

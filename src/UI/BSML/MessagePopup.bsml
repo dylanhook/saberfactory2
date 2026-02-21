@@ -1,0 +1,10 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+ bg="round-rect-panel" bg-color="#333" border="" raycast="true">
+    <vertical pad='10' vertical-fit='PreferredSize' spacing='10'>
+        <text font-size='7' text='~message' align='Center'/>
+        <horizontal>
+            <sui.button pref-height='10' pref-width='25' text='~yes-button-text' active='~yes-button-active' on-click='yes-click' style="default-button"/>
+            <sui.button pref-height='10' pref-width='25' text='No' active='~no-button-active' on-click='no-click' style="default-button"/>
+        </horizontal>
+    </vertical>
+</bg>

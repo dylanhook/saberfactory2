@@ -1,0 +1,18 @@
+﻿<bg id="settings-root">
+  <vertical bg="round-rect-panel" custom-color="$default-panel" pref-height="80" pad="2" vertical-fit="PreferredSize">
+    <horizontal pad="2" bg="panel-top" skew="0" bg-color="#00b6ff40">
+      <checkbox text="Saber Factory 2 Enabled" value="mod-enabled" apply-on-change="true"/>
+    </horizontal>
+    <vertical pad="2" bg="round-rect-panel" bg-color="#00000050" spacing="1">
+      <checkbox text="Enable Events" value="events-enabled" apply-on-change="true" hover-hint="Enable events on the saber (like fc effects)"/>
+      <checkbox text="Random Sabers" value="random-sabers" apply-on-change="true" hover-hint="Choose a random saber on every song start"/>
+      <checkbox text="Override song saber" value="override-song-saber" apply-on-change="true" hover-hint="Use your own saber instead of the one dictated by the song"/>
+      <slider-setting text="Swing Sound Vol" value="SwingSoundVolume" apply-on-change="true" min="0" max="5"/>
+      <text text="More settings in 'Beat Saber\UserData\Saber Factory 2.json'" align="Center" font-color="#ffffff60"/>
+    </vertical>
+    <horizontal bg="panel-top" skew="0" bg-color="#00b6ff20" pad="2">
+      <sui.icon-button pad="1" pref-width="15" preferred-height="15" on-click="profile-clicked" icon="SaberFactory2.Resources.Icons.profile.png" hover-hint="Original Author - Toni Macaroni" skew="0" show-line="false" normal-color="#00000000" hovered-color="#00b6ff40" use-gradient="false"/>
+      <sui.icon-button pad="1" pref-width="15" preferred-height="15" on-click="discord-clicked" icon="SaberFactory2.Resources.Icons.discord.png" hover-hint="Join DylanCord for support" skew="0" show-line="false" normal-color="#00000000" hovered-color="#00b6ff40" use-gradient="false"/>
+    </horizontal>
+  </vertical>
+</bg>
